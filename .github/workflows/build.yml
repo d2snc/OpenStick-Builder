@@ -22,7 +22,7 @@ jobs:
         run: sudo sh -e scripts/extract_fw.sh
 
       - name: Create rootfs
-        run: sudo sh -e scripts/debootstrap.sh
+        run: sudo RELEASE=bookworm sh -e scripts/debootstrap.sh
 
       - name: Build gadget-tool
         run: sudo sh -e scripts/build_gt.sh
